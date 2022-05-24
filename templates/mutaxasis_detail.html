@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutaxasis</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container align-items-center">
+    <div class="card mb-3">
+        
+        <img width="370px" height="470px" src="{{object.rasm.url }}" class="card-img-top" alt="...">
+       
+        <div class="card-body">
+            <h4 class="card-title">{{object.ism}} {{object.familya}} {{object.otasining_ismi}}</h4>
+            <p>date📆: {{object.tugilgan_sana}}</p>
+            <p class="card-text">{{object.lavozim}}</p>
+            <p class="card-text"><small class="text-muted">{{object.yonalish}}</small></p>
+            <h4>phone📱: {{object.telefon}}</h4>
+            <br>
+            <h2>Portfolio🗃:</h2>
+            <br>
+            <img width="270px" height="370px" src="{{object.portfolio.url }}" class="card-img-top" alt="...">
+            <h2>Email📝: {{object.email}}</h2>
+            <br><br>
+            <h2>Sertfikat</h2>
+            <br>
+            <img width="270px" height="370px" src="{{object.sertifikat.url }}" class="card-img-top" alt="...">
+            <h3>Til📋: {{object.til}}</h3>
+          </div>
+
+    </div>
+</div>
+
+{% endblock content  %}
+</body>
+</html>
